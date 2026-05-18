@@ -4,9 +4,9 @@
   --cor-de-fundo: #960d68;
   --rosa: #f3d3e7;
   --branco: #ffffff;
-  --botao-ativo: #6b094e;
-  --botao-inativo: rgba(28, 29, 31, 0.5);
-  --texto-fundo: rgba(220, 153, 241, 0.39);
+  --botao-ativo: #a0628d;
+  --botao-inativo: rgba(63, 6, 90, 0.5);
+  --texto-fundo: rgba(98, 41, 116, 0.39);
 }
 
 body {
@@ -68,4 +68,8 @@ body {
   .botao:last-child {
     border-radius: 0 40px 0 0;
   }
+}
+.ativo {
+  background-color: var(--botao-ativo);
+  border-bottom: 4px solid var(--rosa);
 }
