@@ -1,54 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meus objetivos do ano</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <section class="conteudo-principal">
-      <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
-      <div class="botoes">
-        <button class="botao ativo">passar no vestibular</button>
-<button class="botao">passar no vestibular</button>
-<button class="botao">passar no vestibular</button>
-<button class="botao">passar no vestibular</button>
-      </div>
-      <div class="abas-textos">
-  <div class="aba-conteudo">
-    <h3 class="aba-conteudo-titulo-principal">Estudar pro vestibular</h3>
-    <h4 class="aba-conteudo-titulo-secundario">
-      uns 200 dias aí sla
-    </h4>
-  </div>
-  <div class="aba-conteudo">
-    <h3 class="aba-conteudo-titulo-principal">
-      estudar
-    </h3>
-    <h4 class="aba-conteudo-titulo-secundario">
-      o tempo que deus quiser
-    </h4>
-  </div>
-  <div class="aba-conteudo">
-    <h3 class="aba-conteudo-titulo-principal">
-      ir no banho de lama em vez de configurar essas bomba
-    </h3>
-    <h4 class="aba-conteudo-titulo-secundario">
-      vou ver só ano que vem
-    </h4>
-  </div>
-  <div class="aba-conteudo">
-    <h3 class="aba-conteudo-titulo-principal">
-      sair dessa bomba
-    </h3>
-    <h4 class="aba-conteudo-titulo-secundario">
-      final do ano
-    </h4>
-  </div>
-</div>
-    </section>
-    <script src="main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus objetivos do ano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="conteudo-principal">
+    <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
+    <div class="botoes">
+      <button class="botao ativo">ir bem para o vestibular</button>
+      <button class="botao">ir no banho de lama em 2027</button>
+      <button class="botao">dia das meninas</button>
+      <button class="botao">niver da minha mamae</button>
+    </div>
+  </section>
+
+  <section class="abas-textos">
+    <div class="aba-conteudo">
+      <h3 class="aba-conteudo-titulo-principal">estudar bem e se sentir bem no vestibular</h3>
+      <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+    </div>
+    <div class="aba-conteudo">
+      <h3 class="aba-conteudo-titulo-principal">passar no vestibular</h3>
+      <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+    </div>
+    <div class="aba-conteudo">
+      <h3 class="aba-conteudo-titulo-principal">dia das meninas com as unicas que consigo confiar</h3>
+      <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+    </div>
+    <div class="aba-conteudo">
+      <h3 class="aba-conteudo-titulo-principal">Aniversário da mulher mais linda do mundo</h3>
+      <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+    </div>
+  </section>
+
+  <script>
+    const botoes = document.querySelectorAll('.botao');
+    const abas = document.querySelectorAll('.aba-conteudo');
+
+    function mostraAba(index) {
+      for (let k = 0; k < abas.length; k++) {
+        abas[k].style.display = k === index ? 'block' : 'none';
+      }
+    }
+
+    for (let i = 0; i < botoes.length; i++) {
+      botoes[i].addEventListener('click', function () {
+        for (let j = 0; j < botoes.length; j++) {
+          botoes[j].classList.remove('ativo');
+        }
+        botoes[i].classList.add('ativo');
+        mostraAba(i);
+      });
+    }
+
+    // mostra somente a primeira aba inicialmente
+    mostraAba(0);
+  </script>
+
+  <script src="main.js"></script>
+</body>
+
 </html>
